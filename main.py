@@ -21,7 +21,8 @@ app = FastAPI()
 # ==============================================================================
 
 # 1. إعدادات المشروع
-MY_API_KEY = "AIzaSyDDfhViSnKSMAl5VSJVg7kCNqWSEIAKfRQ"
+MY_API_KEY = os.environ.get("GEMINI_API_KEY")
+
 MODEL_NAME = "gemini-2.5-flash"
 
 genai.configure(api_key=MY_API_KEY)
